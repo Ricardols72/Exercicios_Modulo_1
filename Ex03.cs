@@ -1,54 +1,48 @@
 ﻿using System;
 
-
-namespace MDC {
+namespace Exer03 {
     class Program {
         static void Main(string[] args) {
-
-            int num1, num2, aux;
+            double celsius, fahrenheit, aux;
+            string resposta;
             
+            Console.WriteLine("#######################################");
+            Console.WriteLine("#         Graus em Fahrenheit         #");
+            Console.WriteLine("#######################################");
 
-            Console.WriteLine("###################################################");
-            Console.WriteLine("#                     MDC                         #");
-            Console.WriteLine("###################################################");
+            Console.WriteLine("Para qual conversão deseja realizar, Celsius ou Fahrenheit?");
+            resposta = Convert.ToString(Console.ReadLine());
+            
+            if(resposta == "Celsius" || resposta == "celsius") {
 
+                Console.WriteLine("Digite a temperatura em Fahrenheit:");
+                fahrenheit = Convert.ToDouble(Console.ReadLine());
+                aux = Celsius(fahrenheit);
+                Console.WriteLine("A conversão de " + fahrenheit + " Fahrenheit em Celsius é:"  + aux + "C");
 
+            }
+            else if( resposta == "Fahrenheit" || resposta == "fahrenheit") {
+                Console.WriteLine("Digite a temperatura em Celsius:");
+                celsius = Convert.ToDouble(Console.ReadLine());
+                aux = Fahrenheit(celsius);
+                Console.WriteLine("A conversão de " + celsius + "C em Fahrenheit é:" + aux + "F");
 
-
-            Console.WriteLine("Informe o primeiro valor: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("informe o segundo valor");
-            num2 = Convert.ToInt32(Console.ReadLine());
-
-            aux = Mdc(num1, num2);
-
-            Console.WriteLine("O M.D.C para " + num1 + " e " + num2 + " é: " + aux);
-           
+            }          
+            
         }
 
+        static double Fahrenheit(double c) {
+            double f;
 
-        static int Mdc(int a, int b) {
-            int divisor, dividendo, rest;
-            
-            
-            if (a == 0 || b == 0)
-                Console.WriteLine("Erro, valor = 0");
-
-            if (a > b) {
-                dividendo = a;
-                divisor = b;
-
-            } else {
-                dividendo = b;
-                divisor = a;
-            }
-            while (dividendo % divisor != 0) {
-                rest = dividendo % divisor;
-                dividendo = divisor;
-                divisor = rest;
-            }
-             return divisor;
+            f = (c * 1.8) + 32;
+            return f;
         }
 
+        static double Celsius(double f) {
+            double c;
+
+            c = (f - 32) / 1.8;
+            return c;
+        }
     }
 }
