@@ -22,19 +22,16 @@ namespace Ex07 {
 
             Console.WriteLine("Posição inicial da pilha.");
 
-            foreach (int value in array) {
-                Console.WriteLine("[" + value + "]");
-            }
+            foreach (int value in array)  Console.WriteLine("[" + value + "]");
+            
 
             Array.Reverse(array);
 
             Console.WriteLine("Posição invertida da pilha.");
-            foreach (int value in array) {
-                Console.WriteLine("[" + value + "]");
-            }
+            foreach (int value in array)  Console.WriteLine("[" + value + "]");
+            
 
             Console.ReadKey();
-
 
             //Forma manual de inverter um array
 /*
