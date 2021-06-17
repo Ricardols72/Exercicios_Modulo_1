@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 
 namespace Exe04 {
     class Program {
         static void Main(string[] args) {
-            double valor1, valor2, valor3, aux;
+            double valor1, valor2, valor3;
 
 
 
@@ -18,21 +18,13 @@ namespace Exe04 {
             valor2 = Convert.ToDouble(Console.ReadLine());
             valor3 = Convert.ToDouble(Console.ReadLine());
 
-            double delta1 = Math.Sqrt(valor2 * valor2);
-            double delta2 = Math.Sqrt(4 * valor1 * valor3);
+            double delta = (valor2 * valor2) - (4 * valor1 * valor3);
+            double raiz = Math.Sqrt(delta);
+            var x1 = ((-(valor2)) + raiz) / (2 * valor1);
+            var x2 = ((-(valor2)) - raiz) / (2 * valor1);
 
-            double delta = (delta1 - delta2);
+            Console.WriteLine("Valor de X: " + x1 + " Valor de X: " + x2);
 
-            double num1 = (-valor2 + (delta)) / (2 * valor1);
-            double num2 = (-valor2 - (delta)) / (2 * valor1);
-
-
-            Console.WriteLine("resultado 1 " + num1 + " e resultado 2 " + num2);
-          
         }
-
-
-
-
     }
 }
