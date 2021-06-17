@@ -15,7 +15,7 @@ namespace Ex07 {
 
             for (int i = 0; i < 10; i++) {
                 Console.WriteLine("Informe um número");
-                numero = Convert.ToInt32(Console.ReadLine());
+                numero = int.Parse(Console.ReadLine());
 
                 array[i] = numero;
             }
