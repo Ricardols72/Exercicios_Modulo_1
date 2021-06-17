@@ -19,20 +19,15 @@ namespace Ex02 {
             Console.Write("Agora informe o valor do reajuste: ");
             porcentagem = Convert.ToDouble(Console.ReadLine());
 
-
             novoSalario = Reajuste(salario, porcentagem);
 
             Console.WriteLine("O seu novo salário com rejuste de " + porcentagem + "% é de: " + novoSalario);
-
         }
 
         static double Reajuste(double s, double p) {
 
             double novoSal;
-
-            novoSal = s +((p * s)/100);
-            
-            
+            novoSal = s +((p * s)/100);   
             return novoSal;
         }
     }
