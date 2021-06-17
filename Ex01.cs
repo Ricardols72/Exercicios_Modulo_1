@@ -6,8 +6,7 @@ namespace Exercicios {
 
             int mes;
              int resultado;
-            
-            
+                
             Console.WriteLine("#########################################################");
             Console.WriteLine("#             Calculadora de dias em meses              #");
             Console.WriteLine("#########################################################");
@@ -21,10 +20,7 @@ namespace Exercicios {
         }
         static int Calculadora(int m) {
             int aux;
-
             aux = m * 30;
-
-
             return aux;
         }
     }
