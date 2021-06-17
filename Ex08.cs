@@ -13,7 +13,7 @@ namespace Exer08 {
 
             for (int i = 0; i < array.Length; i++) {
                 Console.WriteLine("Informe um número");
-               numero = Convert.ToInt32(Console.ReadLine());
+               numero = int.Parse(Console.ReadLine());
                 array[i] = numero;  
             }
 
