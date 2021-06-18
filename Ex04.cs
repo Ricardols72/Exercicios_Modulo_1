@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Exe04 {
     class Program {
@@ -26,9 +26,5 @@ namespace Exe04 {
             Console.WriteLine("Valor de X: " + x1 + " Valor de X: " + x2);
 
         }
-
-
-
-
     }
 }
